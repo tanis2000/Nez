@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
@@ -94,18 +94,10 @@ namespace Nez
 		}
 
 
-		#if !FNA
-		protected override bool OnApply()
-		{
-			_timeParam.SetValue( Time.time );
-			return false;
-		}
-		#else
 		protected override void OnApply()
 		{
 			_timeParam.SetValue( Time.time );
 		}
-		#endif
 	}
 }
 
